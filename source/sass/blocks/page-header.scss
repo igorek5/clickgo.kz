@@ -1,3 +1,54 @@
 .page-header {
-  background-color: $color-white;
+  position: relative;
+
+  margin-bottom: 40px;
+}
+
+.page-header__wrapper {
+  min-width: 320px;
+
+  @media (min-width: $desktop-width) {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+}
+
+.page-header__logo {
+  display: block;
+  width: 145px;
+  height: 50px;
+
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:not(a[href]) {
+    pointer-events: none;
+  }
+}
+
+.page-header__logo-image {
+  width: 145px;
+  height: 50px;
+
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    height: 60px;
+  }
 }
