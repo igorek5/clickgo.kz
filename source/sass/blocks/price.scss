@@ -1,5 +1,8 @@
 .price {
+  padding: 40px 0;
   margin-bottom: 40px;
+
+  background-color: $color-gray;
 }
 
 .price__title {
@@ -133,17 +136,20 @@
 }
 
 .price__addition-item {
-  padding-left: 40px;
-  margin-bottom: 5px;
   position: relative;
+
+  margin-bottom: 5px;
+  padding-left: 40px;
 
   &::before {
     content: "";
     position: absolute;
     top: 12px;
     left: 5px;
+
     width: 20px;
     height: 2px;
+
     background-color: $color-light-red;
   }
 }

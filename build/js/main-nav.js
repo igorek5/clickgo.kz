@@ -1,7 +1,6 @@
 const mainNav = document.querySelector(".main-nav");
 const mainNavButton = document.querySelector(".main-nav__toggle");
 const mainNavLink = document.querySelectorAll(".main-nav__link");
-const body = document.querySelector(".page-body");
 
 const isEscEvent = (evt) => evt.key === "Escape" || evt.key === "Esc";
 
@@ -44,4 +43,4 @@ function closeMenuHandler() {
   })
 }
 
-export { setControlMenu };
+setControlMenu();

@@ -21,10 +21,8 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer(),
-      csso()
+      autoprefixer()
     ]))
-    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
@@ -44,7 +42,6 @@ const watcher = () => {
 
 const html = () => {
   return gulp.src("source/**/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 }
 
@@ -54,10 +51,6 @@ exports.html = html;
 
 const scripts = () => {
   return gulp.src("source/**/*.js")
-    .pipe(terser())
-    .pipe(rename({
-      suffix: ".min"
-    }))
     .pipe(gulp.dest('build'));
 }
 
@@ -101,7 +94,6 @@ const copy = (done) => {
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/img/svg/**/*.svg",
-    "source/favicons.webmanifest",
     "source/favicons/**/*"
   ], {
     base: "source"

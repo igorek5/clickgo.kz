@@ -24,6 +24,10 @@
 
 .contacts__wrapper {
   width: 280px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 30px;
+  }
 }
 
 .contacts__link {
@@ -39,11 +43,11 @@
 
   &:hover,
   &:focus {
-    opacity: 0.8;
+    opacity: 0.6;
   }
 
   &:active {
-    opacity: 0.6;
+    opacity: 0.3;
   }
 }
 
@@ -65,17 +69,27 @@
 
 .contacts__link--whatsapp::before {
   top: -2px;
+
   background-image: url("../img/svg/icon-whatsapp.svg");
 }
 
 .contacts__link--mail::before {
   top: -2px;
+
   background-image: url("../img/svg/icon-mail.svg");
 }
 
 .contants__image {
   width: 100%;
+  max-width: 370px;
   margin: 0 auto;
   margin-bottom: 20px;
-  max-width: 370px;
+}
+
+.contants__container {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+  }
 }
