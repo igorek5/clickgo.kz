@@ -1,0 +1,81 @@
+.contacts__title {
+  margin: 0;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-bottom: 40px;
+
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.contacts__wrapper {
+  width: 280px;
+}
+
+.contacts__link {
+  position: relative;
+
+  display: block;
+  margin-bottom: 20px;
+  padding-left: 40px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.contacts__link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 3px;
+
+  width: 30px;
+  height: 30px;
+
+  background-image: url("../img/svg/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px 30px;
+}
+
+
+.contacts__link--whatsapp::before {
+  top: -2px;
+  background-image: url("../img/svg/icon-whatsapp.svg");
+}
+
+.contacts__link--mail::before {
+  top: -2px;
+  background-image: url("../img/svg/icon-mail.svg");
+}
+
+.contants__image {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  max-width: 370px;
+}

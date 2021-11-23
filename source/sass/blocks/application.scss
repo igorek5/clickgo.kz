@@ -1,0 +1,72 @@
+.application {
+  margin-bottom: 20px;
+}
+
+.application__title {
+  margin: 0;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-bottom: 40px;
+
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.application__form {
+  max-width: 360px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    max-width: 460px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 560px;
+  }
+}
+
+.application__input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 17px 14px 14px;
+
+  background-color: $color-gray;
+  border: 1px solid transparent;
+  border-radius: 5px;
+
+  &:hover,
+  &:focus {
+    background-color: $color-white;
+    border-color: $color-gray;
+  }
+}
+
+.application__input::placeholder {
+  font: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+.application__button {
+  width: 100%;
+}
